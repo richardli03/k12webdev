@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+
+<form action="wshop_data.txt">
+<h2> Upload New Workshop </h2>
+
+  <div>
+    <label for="wshopname">Workshop Title:</label><br>
+    <input type="text" id="wshopname" name="wshopname"><br>
+  </div>
+
+  <div>
+    <label for="author">Workshop Creator Name(s):</label><br>
+    <input type="text" id="author" name="author"><br><br>
+  </div>
+
+  <div>
+
+
+  <fieldset>
+  <legend>Select Workshop Categories:</legend>
+    <div>
+      <input type="checkbox" id="math" name="category" value="math">
+      <label for="math">Math</label>
+    </div>
+    <div>
+      <input type="checkbox" id="engineering" name="category" value="engineering">
+      <label for="engineering">Engineering</label>
+    </div>
+    <div>
+      <input type="checkbox" id="highSchool" name="category" value="highSchool">
+      <label for="highSchool">High School</label>
+    </div>
+    <div>
+      <input type="checkbox" id="middleSchool" name="category" value="middleSchool">
+      <label for="middleSchool">Middle School</label>
+    </div>
+    <div>
+      <input type="checkbox" id="design" name="category" value="design">
+      <label for="design">Design</label>
+    </div>
+    <div>
+      <input type="checkbox" id="multidisciplinary" name="category" value="multidisciplinary">
+      <label for="multidisciplinary">Multidisciplinary</label>
+    </div>
+    <div>
+      <input type="checkbox" id="other" name="category" value="other">
+      <label for="other">Other</label>
+      <input type="text" id="otherValue" name="other">
+    </div>
+  </fieldset>
+
+  <div>
+    <p> Workshop Description: </p>
+    <textarea name="wshopDescription" rows="10" cols="50" placeholder="Enter text here..."></textarea><br><br>
+  </div>
+
+  <div>
+  <input type="submit" value="submit">
+  </div>
+</form>
+
+<script>
+    // let saveFile = () => {
+    const fs = require('fs')
+
+        // get information from form
+    	  const workshop = document.getElementById('wshopname');
+        const creators = document.getElementById('author');
+        // const description = document.getElementById('wshopDescription');
+        const msg = document.getElementById('msg');
+
+        // data storing
+        let data =
+            '\r Workshop Title: ' + workshop.value + ' \r\n ' +
+            'Creator Name(s): ' + creators.value + ' \r\n ';
+        //
+
+        fs.writeFile('/test.txt', data, (err) => {
+          if (err) throw err;
+
+        })
+
+</script>
+
+</html>

@@ -1,0 +1,91 @@
+* {
+  box-sizing: border-box;
+}
+
+img {
+  vertical-align: middle;
+}
+
+/* Position the image container (needed to position the left and right arrows) */
+.slide-container {
+  position: relative;
+  max-width: 800px
+}
+
+/* Hide the images by default */
+.slide-mySlides {
+  display: none;
+}
+
+/* Add a pointer when hovering over the thumbnail images */
+.slide-cursor {
+  cursor: pointer;
+}
+
+/* Next & previous buttons */
+.slide-prev,
+.slide-next {
+  cursor: pointer;
+  position: absolute;
+  top: 40%;
+  width: auto;
+  padding: 16px;
+  margin-top: -50px;
+  color: #D3D3D3;
+  font-weight: bold;
+  font-size: 20px;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+/* Position the "next button" to the right */
+.slide-next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.slide-prev:hover,
+.slide-next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Number text (1/3 etc) */
+.slide-numbertext {
+  color: #808080;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* Container for image text */
+.slide-caption-container {
+  text-align: center;
+  background-color: rgba(56, 204, 204, 0.75);
+  padding: 2px 16px;
+  color: white;
+}
+
+.slide-row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Six columns side by side */
+.slide-column {
+  float: left;
+  width: 16.66%;
+}
+
+/* Add a transparency effect for thumnbail images */
+.slide-demo {
+  opacity: 0.6;
+}
+
+.slide-active,
+.slide-demo:hover {
+  opacity: 1;
+}

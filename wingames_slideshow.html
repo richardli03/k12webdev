@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="css/slideshow.css" rel="stylesheet">
+  <style>
+  body {
+    font-family: Arial;
+    margin: 0;
+  }
+  </style>
+</head>
+
+<body>
+
+  <!-- Container for the image gallery -->
+<div class="slide-container">
+
+<!-- Full-width images with number text -->
+<div class="slide-mySlides">
+  <div class="slide-numbertext">1 / 6</div>
+    <img src="img/wingames/wingames_title.jpg" style="width:100%">
+</div>
+
+<div class="slide-mySlides">
+  <div class="slide-numbertext">2 / 6</div>
+    <img src="img/wingames/wingames_1.jpg" style="width:100%">
+</div>
+
+<div class="slide-mySlides">
+  <div class="slide-numbertext">3 / 6</div>
+    <img src="img/wingames/wingames_2.jpg" style="width:100%">
+</div>
+
+<div class="slide-mySlides">
+  <div class="slide-numbertext">4 / 6</div>
+    <img src="img/wingames/wingames_3.jpg" style="width:100%">
+</div>
+
+<div class="slide-mySlides">
+  <div class="slide-numbertext">5 / 6</div>
+    <img src="img/wingames/wingames_4.jpg" style="width:100%">
+</div>
+
+<div class="slide-mySlides">
+  <div class="slide-numbertext">6 / 6</div>
+    <img src="img/wingames/wingames_5.jpg" style="width:100%">
+</div>
+
+<!-- Next and previous buttons -->
+<a class="slide-prev" onclick="plusSlides(-1)">&#10094;</a>
+<a class="slide-next" onclick="plusSlides(1)">&#10095;</a>
+
+<!-- Image text -->
+<div class="slide-caption-container">
+  <p id="caption"></p>
+</div>
+
+<!-- Thumbnail images -->
+<div class="slide-row">
+  <div class="slide-column">
+    <img class="slide-demo slide-cursor" src="img/wingames/wingames_title.jpg" style="width:100%" onclick="currentSlide(1)" alt="Welcome to the Games with a 100% Win Strategy workshop!">
+  </div>
+  <div class="slide-column">
+    <img class="slide-demo slide-cursor" src="img/wingames/wingames_1.jpg" style="width:100%" onclick="currentSlide(2)" alt="Meet the authors!">
+  </div>
+  <div class="slide-column">
+    <img class="slide-demo slide-cursor" src="img/wingames/wingames_2.jpg" style="width:100%" onclick="currentSlide(3)" alt="Example Slide: Fun game to start the workshop">
+  </div>
+  <div class="slide-column">
+    <img class="slide-demo slide-cursor" src="img/wingames/wingames_3.jpg" style="width:100%" onclick="currentSlide(4)" alt="Example Slide: Why is the game rigged?">
+  </div>
+  <div class="slide-column">
+    <img class="slide-demo slide-cursor" src="img/wingames/wingames_4.jpg" style="width:100%" onclick="currentSlide(5)" alt="Example Slide: Intro to modular arithmetics">
+  </div>
+  <div class="slide-column">
+    <img class="slide-demo slide-cursor" src="img/wingames/wingames_5.jpg" style="width:100%" onclick="currentSlide(6)" alt="Example Slide: Relating back to our intro game">
+  </div>
+</div>
+</div>
+
+  <script>
+  var slideIndex = 1;
+  showSlides(slideIndex);
+
+  function plusSlides(n) {
+    showSlides(slideIndex += n);
+  }
+
+  function currentSlide(n) {
+    showSlides(slideIndex = n);
+  }
+
+  function showSlides(n) {
+    var i;
+    var slides = document.getElementsByClassName("slide-mySlides");
+    var dots = document.getElementsByClassName("slide-demo");
+    var captionText = document.getElementById("caption");
+    if (n > slides.length) {slideIndex = 1}
+    if (n < 1) {slideIndex = slides.length}
+    for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+    }
+    for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+    }
+    slides[slideIndex-1].style.display = "block";
+    dots[slideIndex-1].className += " active";
+    captionText.innerHTML = dots[slideIndex-1].alt;
+  }
+  </script>
+
+  </body>
+  </html>
