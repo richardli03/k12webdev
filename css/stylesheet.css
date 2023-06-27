@@ -35,7 +35,7 @@ h4 {
 }
 
 .navbar {
-    background-color: #009BDF;
+    background-color: #000;
     font-family: DIN-black
 }
 
@@ -62,7 +62,7 @@ h4 {
 }
 
 .navbar-nav .nav-item .nav-link.active {
-    color: #000;
+    color: #009ADE;
 }
 
 .workshop-item {
@@ -74,6 +74,13 @@ h4 {
     width: 100%;
     height: auto;
     transition: transform 0.2s;
+}
+
+.banner-img {
+    margin-top: 50px;
+    width: 95%;
+    height: auto;
+    position: relative;
 }
 
 /* Still working out how to make the captions not get covered */

@@ -4,8 +4,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/ext/bootstrap.min.css">
     <link rel="stylesheet" href="css/stylesheet.css">
+    <script src="js/ext/jquery-3.5.1.min.js"></script>
+    <script src="js/ext/bootstrap.bundle.min.js"></script>
     <title>Olin K12 Workshops</title>
 </head>
 
@@ -14,20 +16,21 @@
     <nav class="fixed-top navbar navbar-expand-lg navbar-dark">
         <div class="container">
             <a class="navbar-brand" href="https://www.olin.edu">
-                <img src="img/olin_logo.png" alt="Logo">
+                <img src="img/olin_black.png" alt="Logo">
             </a>
             <span class="navbar-brand">K12 Workshops</span>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <button class="navbar-toggler hidden-sm-up float-xs-right" type="button" data-toggle="collapse"
+                data-target="#navcollapser" aria-controls="navcollapser" aria-expanded="false"
+                aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-                <ul class="navbar-nav">
+            <div class="collapse navbar-collapse justify-content-end" id="navcollapser">
+                <ul class="nav navbar-nav">
                     <li class="nav-item">
                         <a class="nav-link active" href="index.html">Gallery</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="about.html">About Us</a>
+                        <a class="nav-link" href="about.html">About</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="archive.html">Archive</a>
@@ -43,8 +46,53 @@
         <div class="row">
             <div class="col-lg-3">
                 <div class="sidebar">
-                    <p> have to figure out how to make this</p>
-                    <!-- TO BE CREATED -->
+                    <form>
+                        <h2> Search: </h2>
+                        <div class="mb-3">
+                            <input type="text" class="form-control" placeholder="Search">
+                        </div>
+                        <div class="mb-3">
+                            <label for="filter-options" class="form-label">Subject:</label>
+                            <br>
+                            <input type="checkbox" id="subject-select-0" name="subject-select" value="subject-0">
+                            <label for="subject-select-0">Science</label>
+                            <br>
+                            <input type="checkbox" id="subject-select-1" name="subject-select" value="subject-1">
+                            <label for="subject-select-1">Math</label>
+                            <br>
+                            <input type="checkbox" id="subject-select-2" name="subject-select" value="subject-2">
+                            <label for="subject-select-2">Engineering</label>
+                            <br>
+                            <input type="checkbox" id="subject-select-3" name="subject-select" value="subject-3">
+                            <label for="subject-select-3">Design</label>
+
+                        </div>
+                        <div class="mb-3">
+                            <label for="filter-options" class="form-label">Age Range:</label>
+                            <br>
+                            <input type="checkbox" id="age-range-0" name="age-range" value="age-0">
+                            <label for="age-range-0">0-8</label>
+                            <br>
+                            <input type="checkbox" id="age-range-1" name="age-range" value="age-1">
+                            <label for="age-range-1">8-13</label>
+                            <br>
+                            <input type="checkbox" id="age-range-2" name="age-range" value="age-2">
+                            <label for="age-range-2">13-18</label>
+                            <br>
+                            <input type="checkbox" id="age-range-3" name="age-range" value="age-3">
+                            <label for="age-range-3">18+</label>
+                        </div>
+                        <div class="mb-3">
+                            <label for="filter-options" class="form-label">Preparation Time:</label>
+                            <select class="form-select" id="filter-options">
+                                <option value="">None</option>
+                                <option value="option1">[TBD]</option>
+                                <option value="option2">[TBD]</option>
+                                <option value="option3">[TBD]</option>
+                            </select>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Apply</button>
+                    </form>
                 </div>
             </div>
             <div class="col-lg-9">
@@ -68,7 +116,7 @@
                     </div>
 
                     <div class="col-md-4 mb-4">
-                        <div class="workshop-item">
+                        <div class="workshop-item age-1">
                             <a href="projects/cows.html">
                                 <!-- should probably add alt text -->
                                 <div class="img-holder">
