@@ -76,6 +76,13 @@ h4 {
     transition: transform 0.2s;
 }
 
+.banner-img {
+    margin-top: 50px;
+    width: 95%;
+    height: auto;
+    position: relative;
+}
+
 /* Still working out how to make the captions not get covered */
 .workshop-caption {
     margin-top: 10px;
