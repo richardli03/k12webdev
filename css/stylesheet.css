@@ -57,6 +57,13 @@ h4 {
     margin-top: 50px;
 }
 
+.sidebar-header {
+    /* background-color: #333; */
+    font-family: DIN-black;
+    color: black;
+    padding: 10px;
+}
+
 .navbar-nav .nav-item .nav-link {
     color: #fff;
 }
