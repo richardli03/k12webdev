@@ -27,8 +27,9 @@ function filterWorkshops() {
     workshopBlocks.forEach((block) => {
         // for each block, decide if show or not
         const show = noSelection ||
-            block.classList.contains(selectedGradeRanges) ||
-            block.classList.contains(selectedSubjects);
+            selectedSubjects.some((subject) => block.classList.contains(subject)) || // At least one selected subject matches
+            selectedGradeRanges.some((gradeRange) => block.classList.contains(gradeRange)); // At least one selected grade range matches
+
         if (!show) {
             block.classList.add('collapse')
         } else {
