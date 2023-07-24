@@ -46,16 +46,14 @@
             <div class="col-lg-3">
                 <div class="sidebar">
                     <form>
-                        <h2>Search:</h2>
-                        <div class="mb-3">
-                            <input type="text" class="form-control" placeholder="Search">
-                        </div>
+                        <h2>Filter:</h2>
+
                         <div class="mb-3">
                             <a class="sidebar-header block" data-toggle="collapse" href="#subject-section" role="button"
                                 aria-expanded="true" aria-controls="subject-section">
                                 Subjects
                             </a>
-                            <div class="collapse" id="subject-section">
+                            <div class="collapse show" id="subject-section">
                                 <input type="checkbox" id="subject-select-0" name="subject-select" value="subject-0">
                                 <label for="subject-select-0">Science</label><br>
                                 <input type="checkbox" id="subject-select-1" name="subject-select" value="subject-1">
@@ -71,7 +69,7 @@
                                 role="button" aria-expanded="false" aria-controls="grade-range-section">
                                 Grade
                             </a>
-                            <div class="collapse" id="grade-range-section">
+                            <div class="collapse show" id="grade-range-section">
                                 <input type="checkbox" id="grade-range-0" name="grade-range" value="grade-0">
                                 <label for="grade-range-0">1-5</label><br>
                                 <input type="checkbox" id="grade-range-1" name="grade-range" value="grade-1">
@@ -86,7 +84,7 @@
                                 role="button" aria-expanded="false" aria-controls="prep-time-section">
                                 Prep-time
                             </a>
-                            <div class="collapse" id="prep-time-section">
+                            <div class="collapse show" id="prep-time-section">
                                 <input type="checkbox" id="grade-range-0" name="grade-range" value="age-0">
                                 <label for="grade-range-0">~ 0</label><br>
                                 <input type="checkbox" id="grade-range-1" name="grade-range" value="age-1">
@@ -136,8 +134,8 @@
                         </div>
                     </div>
 
-                      <div class="col-md-4 mb-4">
-                        <div class="workshop-item age-0">
+                    <div class="workshop-item age-0 col-md-4 mb-4">
+                        <div class="">
                             <a href="projects/cows.html">
                                 <!-- should probably add alt text -->
                                 <div class="img-holder">
@@ -153,8 +151,8 @@
                         </div>
                     </div>
 
-                    <div class="col-md-4 mb-4">
-                        <div class="workshop-item">
+                    <div class="workshop-item col-md-4 mb-4 grade-2">
+                        <div class="">
                             <a href="projects/cows.html">
                                 <!-- should probably add alt text -->
                                 <div class="img-holder">
@@ -218,4 +216,3 @@
 <script src="js/script.js"></script>
 
 </html>
-
