@@ -20,11 +20,28 @@ body {
     line-height: 2em;
 }
 
+#download {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+
+    overflow: hidden;
+    /* Hide any overflowing content */
+}
+
 h2 {
     font-family: DIN-black;
     color: #00448B;
     margin-top: 25px;
     margin-bottom: 25px;
+}
+
+h3 {
+    font-family: DIN-black;
+    color: #00448B;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    text-align: center;
 }
 
 h4 {
@@ -118,4 +135,19 @@ h4 {
 .sidebar {
     background-color: #E4E4E4;
     padding: 20px;
+}
+
+.about-block {
+    padding-left: 50px;
+    padding-right: 50px;
+    text-align: center
+}
+
+.caption {
+    font-style: italic
+}
+
+#about-blurb {
+    margin: 0 auto;
+    width: 50%
 }
