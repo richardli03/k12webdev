@@ -11,11 +11,17 @@ html {
     src: url("DIN\ Black\ Regular.otf") format("opentype");
 }
 
+@font-face {
+    font-family: DIN;
+    src: url("../assets/DIN.ttf") format("opentype")
+}
+
 
 body {
     margin: 0 0 0 0 !important;
     padding: 0;
-    font-family: 'Source Sans Pro', sans-serif;
+    /* font-family: 'Source Sans Pro', sans-serif; */
+    font-family: DIN;
     font-size: 19px;
     line-height: 2em;
 }
@@ -34,6 +40,11 @@ h2 {
     color: #00448B;
     margin-top: 25px;
     margin-bottom: 25px;
+}
+
+h2.no-margins {
+    margin-top: 0px;
+    margin-bottom: 0px;
 }
 
 h3 {
@@ -149,5 +160,5 @@ h4 {
 
 #about-blurb {
     margin: 0 auto;
-    width: 50%
+    width: 95%;
 }
