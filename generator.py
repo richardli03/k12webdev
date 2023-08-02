@@ -10,12 +10,16 @@ def convert_csv(csv_path):
             title = row["TITLE"].strip()
             tags = row["TAGS"].strip().split(",")
             description = row["DESCRIPTION"].strip()
-            data_list.append((title, tags, description))
+            subpage_path = row["PATH TO SUBPAGE"].strip()
+            thumbnail_path = row["PATH TO THUMBNAIL"].strip()
+            download_path = row["PATH TO DOWNLOAD"].strip()
+            data_list.append(
+                (title, tags, description, subpage_path, thumbnail_path, download_path))
 
     return data_list
 
 
-def generate_workshop(title, description, tags, path_to_subpage, path_to_thumbnail):
+def generate_workshop(title, tags, description, path_to_subpage, path_to_thumbnail, path_to_download):
     tags_with_spaces = ""
     for tag in tags:
         tags_with_spaces = tags_with_spaces + tag.strip() + " "
@@ -29,7 +33,8 @@ def generate_workshop(title, description, tags, path_to_subpage, path_to_thumbna
                 </a>
                 <div class="workshop-caption">
                     <p class="tags">{tags}</p>
-                    <h4>{title}</h4>
+                    <h4>{title} <a href="downloads/Carnival Games Teacher's Guide.pdf" download>
+                            <img id="download" src="{path_to_download}"> </a> </h4>
                     <p class="created-by">{description}</p>
                 </div>
             </div>
@@ -44,5 +49,6 @@ if __name__ == "__main__":
     result_list = convert_csv(DATABASE)
 
     for result in result_list:
-        html_output = generate_workshop(result[0], result[2], result[1])
+        html_output = generate_workshop(
+            result[0], result[1], result[2], result[3], result[4], result[5])
         print(html_output)
