@@ -14,7 +14,7 @@
 
     <nav class="fixed-top navbar navbar-expand-lg navbar-dark">
         <div class="container">
-            <a class="navbar-brand" href="https://www.olin.edu">
+            <a class="navbar-brand" href="index.html">
                 <img src="img/olin_black.png" alt="Logo">
             </a>
             <span class="navbar-brand">K12 Workshops</span>
@@ -32,8 +32,12 @@
                         <a class="nav-link" href="about.html">About</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="archive.html">Archive</a>
+                        <a class="nav-link" href="https://www.olin.edu">Olin</a>
                     </li>
+                    <!-- UNCOMMENT WHEN ARCHIVE IS WORKING -->
+                    <!-- <li class="nav-item">
+                        <a class="nav-link" href="archive.html">Archive</a>
+                    </li> -->
                 </ul>
             </div>
         </div>
@@ -46,16 +50,14 @@
             <div class="col-lg-3">
                 <div class="sidebar">
                     <form>
-                        <h2>Search:</h2>
-                        <div class="mb-3">
-                            <input type="text" class="form-control" placeholder="Search">
-                        </div>
+                        <h2>Filter:</h2>
+
                         <div class="mb-3">
                             <a class="sidebar-header block" data-toggle="collapse" href="#subject-section" role="button"
                                 aria-expanded="true" aria-controls="subject-section">
-                                Subjects
+                                Disciplines
                             </a>
-                            <div class="collapse" id="subject-section">
+                            <div class="collapse show" id="subject-section">
                                 <input type="checkbox" id="subject-select-0" name="subject-select" value="subject-0">
                                 <label for="subject-select-0">Science</label><br>
                                 <input type="checkbox" id="subject-select-1" name="subject-select" value="subject-1">
@@ -63,7 +65,11 @@
                                 <input type="checkbox" id="subject-select-2" name="subject-select" value="subject-2">
                                 <label for="subject-select-2">Engineering</label><br>
                                 <input type="checkbox" id="subject-select-3" name="subject-select" value="subject-3">
-                                <label for="subject-select-3">Design</label>
+                                <label for="subject-select-3">Design</label><br>
+                                <input type="checkbox" id="subject-select-4" name="subject-select" value="subject-4">
+                                <label for="subject-select-4">Art</label><br>
+                                <input type="checkbox" id="subject-select-5" name="subject-select" value="subject-5">
+                                <label for="subject-select-5">Fabrication</label><br>
                             </div>
                         </div>
                         <div class="mb-3">
@@ -71,7 +77,7 @@
                                 role="button" aria-expanded="false" aria-controls="grade-range-section">
                                 Grade
                             </a>
-                            <div class="collapse" id="grade-range-section">
+                            <div class="collapse show" id="grade-range-section">
                                 <input type="checkbox" id="grade-range-0" name="grade-range" value="grade-0">
                                 <label for="grade-range-0">1-5</label><br>
                                 <input type="checkbox" id="grade-range-1" name="grade-range" value="grade-1">
@@ -84,15 +90,15 @@
                         <div class="mb-3">
                             <a class="sidebar-header block" data-toggle="collapse" href="#prep-time-section"
                                 role="button" aria-expanded="false" aria-controls="prep-time-section">
-                                Prep-time
+                                Prep Work
                             </a>
-                            <div class="collapse" id="prep-time-section">
-                                <input type="checkbox" id="grade-range-0" name="grade-range" value="age-0">
-                                <label for="grade-range-0">~ 0</label><br>
-                                <input type="checkbox" id="grade-range-1" name="grade-range" value="age-1">
-                                <label for="grade-range-1">0-2 hours</label><br>
-                                <input type="checkbox" id="grade-range-2" name="grade-range" value="age-2">
-                                <label for="grade-range-2">2 hours + </label><br>
+                            <div class="collapse show" id="prep-time-section">
+                                <input type="checkbox" id="prep-time-0" name="prep-time" value="prep-0">
+                                <label for="prep-time-0">Print + Go!</label><br>
+                                <input type="checkbox" id="prep-time-1" name="prep-time" value="prep-1">
+                                <label for="prep-time-1">Gather, Print + Go!</label><br>
+                                <input type="checkbox" id="prep-time-2" name="prep-time" value="prep-2">
+                                <label for="prep-time-2">Special Equipmen Req'd</label><br>
                             </div>
                         </div>
                     </form>
@@ -112,7 +118,9 @@
                             </a>
                             <div class="workshop-caption">
                                 <p class="tags">[TAG][TAG][TAG][TAG]</p>
-                                <h4>Workshop grade-1 grade-0 </h4>
+                                <h4>Workshop grade-1 grade-0 <a href="downloads/Carnival Games Teacher's Guide.pdf"
+                                        download>
+                                        <img id="download" src="assets/download.png"> </a></h4>
                                 <p class="created-by">CREATED BY: name, name, name, name</p>
 
                             </div>
@@ -136,8 +144,8 @@
                         </div>
                     </div>
 
-                      <div class="col-md-4 mb-4">
-                        <div class="workshop-item age-0">
+                    <div class="workshop-item age-0 col-md-4 mb-4">
+                        <div class="">
                             <a href="projects/cows.html">
                                 <!-- should probably add alt text -->
                                 <div class="img-holder">
@@ -146,15 +154,16 @@
                             </a>
                             <div class="workshop-caption">
                                 <p class="tags">[TAG][TAG][TAG][TAG]</p>
-                                <h4>Workshop HI SARAH </h4>
+                                <h4>Workshop HI SARAH <a href="downloads/Carnival Games Teacher's Guide.pdf" download>
+                                        <img id="download" src="assets/download.png"> </a></h4>
                                 <p class="created-by">CREATED BY: name, name, name, name</p>
 
                             </div>
                         </div>
                     </div>
 
-                    <div class="col-md-4 mb-4">
-                        <div class="workshop-item">
+                    <div class="workshop-item col-md-4 mb-4 grade-2">
+                        <div class="">
                             <a href="projects/cows.html">
                                 <!-- should probably add alt text -->
                                 <div class="img-holder">
@@ -163,7 +172,8 @@
                             </a>
                             <div class="workshop-caption">
                                 <p class="tags">[TAG][TAG][TAG][TAG]</p>
-                                <h4>Workshop grade-2 </h4>
+                                <h4>Workshop grade-2 <a href="downloads/Carnival Games Teacher's Guide.pdf" download>
+                                        <img id="download" src="assets/download.png"> </a></h4>
                                 <p class="created-by">CREATED BY: name, name, name, name</p>
 
                             </div>
@@ -180,7 +190,8 @@
                             </a>
                             <div class="workshop-caption">
                                 <p class="tags">[TAG][TAG][TAG][TAG]</p>
-                                <h4>Workshop grade-0 </h4>
+                                <h4>Workshop grade-0 <a href="downloads/Carnival Games Teacher's Guide.pdf" download>
+                                        <img id="download" src="assets/download.png"> </a></h4>
                                 <p class="created-by">CREATED BY: name, name, name, name</p>
 
                             </div>
@@ -197,7 +208,8 @@
                             </a>
                             <div class="workshop-caption">
                                 <p class="tags">[TAG][TAG][TAG][TAG]</p>
-                                <h4>Workshop grade-0 </h4>
+                                <h4>Workshop grade-0 <a href="downloads/Carnival Games Teacher's Guide.pdf" download>
+                                        <img id="download" src="assets/download.png"> </a></h4>
                                 <p class="created-by">CREATED BY: name, name, name, name</p>
 
                             </div>
@@ -218,4 +230,3 @@
 <script src="js/script.js"></script>
 
 </html>
-

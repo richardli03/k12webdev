@@ -11,13 +11,28 @@ html {
     src: url("DIN\ Black\ Regular.otf") format("opentype");
 }
 
+@font-face {
+    font-family: DIN;
+    src: url("../assets/DIN.ttf") format("opentype")
+}
+
 
 body {
     margin: 0 0 0 0 !important;
     padding: 0;
-    font-family: 'Source Sans Pro', sans-serif;
+    /* font-family: 'Source Sans Pro', sans-serif; */
+    font-family: DIN;
     font-size: 19px;
     line-height: 2em;
+}
+
+#download {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+
+    overflow: hidden;
+    /* Hide any overflowing content */
 }
 
 h2 {
@@ -25,6 +40,19 @@ h2 {
     color: #00448B;
     margin-top: 25px;
     margin-bottom: 25px;
+}
+
+h2.no-margins {
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+h3 {
+    font-family: DIN-black;
+    color: #00448B;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    text-align: center;
 }
 
 h4 {
@@ -120,6 +148,25 @@ h4 {
     padding: 20px;
 }
 
+
+.about-block {
+    padding-left: 50px;
+    padding-right: 50px;
+    text-align: center
+}
+
+.caption {
+    font-style: italic
+}
+
+#about-blurb {
+    margin: 0 auto;
+    width: 95%;
+}
+
+#download {
+    margin-bottom: 6px;
+
 .top-blurb {
     background-color: #999999;
     margin-top: 60px;
@@ -184,4 +231,5 @@ h4 {
 .strip-photo {
     margin-top: 30px;
     width: 400px;
+
 }
