@@ -112,7 +112,7 @@ h4 {
 }
 
 .banner-img {
-    margin-top: 50px;
+    padding-top: 0px;
     width: 95%;
     height: auto;
     position: relative;
@@ -149,6 +149,7 @@ h4 {
     padding: 20px;
 }
 
+
 .about-block {
     padding-left: 50px;
     padding-right: 50px;
@@ -166,4 +167,70 @@ h4 {
 
 #download {
     margin-bottom: 6px;
+
+.top-blurb {
+    background-color: #999999;
+    margin-top: 60px;
+    padding-top: 10px;
+    padding-bottom: 20px;
+    padding-left: 5%;
+    padding-right: 5%;
+    width: 100%;
+}
+
+.tag-box {
+    background-color: #ffffff;
+    margin-top: -10px;
+    margin-left: 15px;
+    padding-left: 10px;
+    padding-right: 10px;
+    outline: 3px solid #00448B
+}
+
+.tag {
+    color: #000;
+    font-size: 12px;
+    margin: 0 0 0 0;
+}
+
+.blurb-img {
+    outline: 3px solid #00448B;
+    margin-left: 15px;
+    margin-top: 20px;
+    height: auto;
+    width: 400px;
+}
+
+.blurb-text {
+    background-color: #ffffff;
+    margin-top: 20px;
+    margin-left: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
+    outline: 3px solid #00448B;
+}
+
+.jump-button {
+    background-color: #00448B;
+    margin-left: 20px;
+    text-align: center;
+    color: #ffffff;
+}
+
+.workshop-content {
+    margin-top: 20px;
+    margin-left: 50px;
+    max-width: 60%;
+}
+
+.photo-strip {
+    margin-left:auto;
+    margin-right: 80px;
+    width: 400px;
+}
+
+.strip-photo {
+    margin-top: 30px;
+    width: 400px;
+
 }
