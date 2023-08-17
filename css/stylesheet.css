@@ -52,7 +52,7 @@ h3 {
     color: #00448B;
     margin-top: 25px;
     margin-bottom: 25px;
-    text-align: center;
+    text-align: left;
 }
 
 h4 {
@@ -83,6 +83,7 @@ h4 {
 
 .sidebar {
     margin-top: 50px;
+    margin-left: 50px;
 }
 
 .sidebar-header {
@@ -151,9 +152,9 @@ h4 {
 
 
 .about-block {
-    padding-left: 50px;
-    padding-right: 50px;
-    text-align: center
+    padding-left: 115px;
+    padding-right: 115px;
+    text-align: left
 }
 
 .caption {
@@ -162,7 +163,9 @@ h4 {
 
 #about-blurb {
     margin: 0 auto;
-    width: 95%;
+    padding-left: 115px;
+    padding-right: 115px;
+    text-align: left;
 }
 
 #download {
@@ -174,8 +177,8 @@ h4 {
     margin-top: 60px;
     padding-top: 10px;
     padding-bottom: 20px;
-    padding-left: 5%;
-    padding-right: 5%;
+    padding-left: 130px;
+    padding-right: 130px;
     width: 100%;
 }
 
@@ -220,13 +223,13 @@ h4 {
 
 .workshop-content {
     margin-top: 20px;
-    margin-left: 50px;
+    margin-left: 130px;
     max-width: 60%;
 }
 
 .photo-strip {
     margin-left:auto;
-    margin-right: 80px;
+    margin-right: 130px;
     width: 400px;
 }
 
