@@ -30,12 +30,12 @@ def translate_tags(tags):
         "elem": "Elem",
         "ms": "MS",
         "hs": "HS",
-        "science": "Science",
-        "technology": "Technology",
-        "engineering": "Engineering",
+        "science": "Sci",
+        "technology": "Tech",
+        "engineering": "Engr",
         "art": "Art",
         "math": "Math",
-        "less-than-1-hour": "Less than 1 hour",
+        "less-than-1-hour": "&lt1 hour",
         "1-2-hours": "1-2 hours",
         "2-3-hours": "2-3 hours",
         "3+-hours": "3+ hours",
@@ -72,8 +72,8 @@ def generate_workshop(title, tags, description, path_to_subpage, path_to_thumbna
                 </a>
                 <div class="workshop-caption">
                     <p class="tags">{read_tags}</p>
-                    <h4>{title} <a href="{path_to_download}" download>
-                            <img id="download" src="assets/download.png"> </a> </h4>
+                    <a href="{path_to_subpage}"> <h4>{title}<a> </h4> <a href="{path_to_download}" download>
+                            <img id="download" src="assets/download.png"> </a> 
                     <p class="workshop-description">{description}</p>
                 </div>
             </div>
