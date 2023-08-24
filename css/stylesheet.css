@@ -11,13 +11,28 @@ html {
     src: url("DIN\ Black\ Regular.otf") format("opentype");
 }
 
+@font-face {
+    font-family: DIN;
+    src: url("../assets/DIN.ttf") format("opentype")
+}
+
 
 body {
     margin: 0 0 0 0 !important;
     padding: 0;
-    font-family: 'Source Sans Pro', sans-serif;
+    /* font-family: 'Source Sans Pro', sans-serif; */
+    font-family: DIN;
     font-size: 19px;
     line-height: 2em;
+}
+
+#download {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+
+    overflow: hidden;
+    /* Hide any overflowing content */
 }
 
 h2 {
@@ -25,6 +40,19 @@ h2 {
     color: #00448B;
     margin-top: 25px;
     margin-bottom: 25px;
+}
+
+h2.no-margins {
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+h3 {
+    font-family: DIN-black;
+    color: #00448B;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    text-align: left;
 }
 
 h4 {
@@ -55,6 +83,7 @@ h4 {
 
 .sidebar {
     margin-top: 50px;
+    margin-left: 50px;
 }
 
 .sidebar-header {
@@ -103,9 +132,10 @@ h4 {
     margin: 0 0 0 0;
 }
 
-.created-by {
+.workshop-description {
     color: #6F6F6F;
-    font-size: 10px;
+    font-size: 12px;
+    line-height: 1.2;
     padding: 0;
     margin: 0 0 0 0;
 }
@@ -120,13 +150,35 @@ h4 {
     padding: 20px;
 }
 
+
+.about-block {
+    padding-left: 115px;
+    padding-right: 115px;
+    text-align: left
+}
+
+.caption {
+    font-style: italic
+}
+
+#about-blurb {
+    margin: 0 auto;
+    padding-left: 115px;
+    padding-right: 115px;
+    text-align: left;
+}
+
+#download {
+    margin-bottom: 6px;
+}    
+
 .top-blurb {
     background-color: #999999;
     margin-top: 60px;
     padding-top: 10px;
     padding-bottom: 20px;
-    padding-left: 5%;
-    padding-right: 5%;
+    padding-left: 130px;
+    padding-right: 130px;
     width: 100%;
 }
 
@@ -171,17 +223,18 @@ h4 {
 
 .workshop-content {
     margin-top: 20px;
-    margin-left: 50px;
-    max-width: 75%;
+    margin-left: 130px;
+    max-width: 60%;
 }
 
 .photo-strip {
     margin-left:auto;
-    margin-right: 80px;
+    margin-right: 130px;
     width: 400px;
 }
 
 .strip-photo {
     margin-top: 30px;
     width: 400px;
+
 }
