@@ -27,18 +27,20 @@ def convert_csv(csv_path):
 
 def translate_tags(tags):
     tag_mapping = {
-        "grade-2-5": "2nd-5th grade",
-        "grade-6-8": "6th-8th grade",
-        "grade-9-12": "9th-12th grade",
-        "science": "Science",
-        "technology": "Technology",
-        "engineering": "Engineering",
+        "elem": "Elem",
+        "ms": "MS",
+        "hs": "HS",
+        "science": "Sci",
+        "technology": "Tech",
+        "engineering": "Engr",
         "art": "Art",
         "math": "Math",
-        "prep-1": "~1 hour",
-        "prep-1-2": "~1-2 hours",
-        "prep-2-3": "~2-3 hours",
-        "prep-3+": "~3+ hours"
+        "less-than-1-hour": "&lt1 hour",
+        "1-2-hours": "1-2 hours",
+        "2-3-hours": "2-3 hours",
+        "3+-hours": "3+ hours",
+        "e4e": "E4E",
+        "shifting-rhythms": "SR"
     }
 
     translated_tags = []
@@ -70,8 +72,8 @@ def generate_workshop(title, tags, description, path_to_subpage, path_to_thumbna
                 </a>
                 <div class="workshop-caption">
                     <p class="tags">{read_tags}</p>
-                    <h4>{title} <a href="{path_to_download}" download>
-                            <img id="download" src="assets/download.png"> </a> </h4>
+                    <a href="{path_to_subpage}"> <h4>{title}<a> </h4> <a href="{path_to_download}" download>
+                            <img id="download" src="assets/download.png"> </a> 
                     <p class="workshop-description">{description}</p>
                 </div>
             </div>
