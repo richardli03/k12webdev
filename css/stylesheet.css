@@ -35,6 +35,13 @@ body {
     /* Hide any overflowing content */
 }
 
+h1 {
+    font-family: DIN-black;
+    color: #00448B;
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+
 h2 {
     font-family: DIN-black;
     color: #00448B;
@@ -79,11 +86,11 @@ h4 {
 .main-content {
     /* idk experimentally, looks the best to me */
     margin-top: 7%;
+    padding: 0.5rem 1rem;
 }
 
 .sidebar {
-    margin-top: 50px;
-    margin-left: 50px;
+    padding: 20px;
 }
 
 .sidebar-header {
@@ -144,11 +151,6 @@ h4 {
 
 .workshop-item:hover img {
     transform: scale(0.95);
-}
-
-.sidebar {
-    background-color: #E4E4E4;
-    padding: 20px;
 }
 
 
