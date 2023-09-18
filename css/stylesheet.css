@@ -235,10 +235,23 @@ h4 {
 }
 
 .strip-photo {
-    margin-top: 30px;
+    margin-top: 15px;
     width: 100%;
 
 }
 .adjust-line-height {
     line-height: 1em;
   }
+
+.download-box {
+    background-color: #00448B;
+    margin-top: 15px;
+    padding-top: 20px;
+    padding-bottom: 5px;
+    text-align: center;
+    font-family: DIN-black;
+    color: #ffffff;
+    font-size: 25px;
+    outline: 10px solid #999999;
+    outline-offset: -10px
+}
