@@ -12,18 +12,12 @@
 
 <body>
 
-    <nav class="fixed-top navbar navbar-expand-lg navbar-dark">
-        <div class="container">
-            <a class="navbar-brand" href="../index.html">
-                <img src="../img/olin_workshops_left.png" alt="Logo">
-            </a>
-            <button class="navbar-toggler hidden-sm-up float-xs-right" type="button" data-toggle="collapse"
-                data-target="#navcollapser" aria-controls="navcollapser" aria-expanded="false"
-                aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse justify-content-end" id="navcollapser">
-                <ul class="nav navbar-nav">
+    <nav class="fixed-top navbar navbar-expand-lg">
+        <div class='row container-fluid'>
+                <a class="navbar-brand" href="../index.html">
+                    <img src="../img/olin_workshops_left.png" alt="Logo">
+                </a>
+                <ul class="nav navbar-nav navbar-right">
                     <li class="nav-item">
                         <a class="nav-link active" href="../index.html">Gallery</a>
                     </li>
@@ -31,19 +25,16 @@
                         <a class="nav-link" href="../about.html">About</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="https://www.olin.edu">Olin</a>
+                        <a class="nav-link" target = "_blank" href="https://www.olin.edu">Olin ></a>
                     </li>
-                    <!-- UNCOMMENT WHEN ARCHIVE IS WORKING -->
-                    <!-- <li class="nav-item">
-                        <a class="nav-link" href="archive.html">Archive</a>
-                    </li> -->
                 </ul>
+                </div>
             </div>
         </div>
     </nav>
 <!-- CHANGE TITLE and TAGS HERE-->
 
-    <div class = "top-blurb">
+    <div class = "top-blurb container-fluid">
         <h2> To Float a Boat
         </h2>
         <div class = "row">
@@ -62,10 +53,10 @@
         </div>
         
         </div>
-    </div>
 
-    <div class = "row">
-        <div class = "workshop-content">
+    <div class = "meredith-workshop-content container-fluid">
+        <div class = "row">
+            <div class = "col-lg-8">
             <h2>Description</h2>
             <p> Would your students have fun learning about buoyancy by
                 getting their hands wet with some fun challenges? 
@@ -97,8 +88,12 @@
      
            
         </div>
-        <div class = "column photo-strip">
-            <a href="../downloads/float_boatGuide.pdf">Teacher's Guide (pdf)</a> 
+        <div class = "col-lg-4">
+            <div class = "download-box img-holder"> <a href="../downloads/float_boatGuide.pdf">
+                <p style = 'color: #ffffff'> Teacher's Guide 
+                    <img id="download" style = "filter: invert(100%)" src="../assets/download.png">
+                </p> 
+            </a> </div>
                 
             <img class = "strip-photo" src="../img/float_boat/floatboat1.jpg" alt="">
             <img class = "strip-photo" src="../img/float_boat/floatboat2.jpg" alt="">
@@ -109,6 +104,7 @@
                  HERE-->
 
         </div>
+</div>
 </div>
         
 </body>
