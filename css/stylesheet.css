@@ -189,8 +189,6 @@ h4 {
     margin-left: auto;
     margin-right: 130px;
     width: 400px;
-    padding-left: 15%;
-    padding-right: 15%;
 }
 
 .tag-box {
@@ -220,6 +218,18 @@ h4 {
 }
 
 .workshop-content {
+    margin-top: 20px;
+    margin-left: 130px;
+    max-width: 45%;
+}
+
+.photo-strip {
+    margin-left: auto;
+    margin-right: 130px;
+    width: 400px;
+}
+
+.meredith-workshop-content {
     padding-left: 15%;
     padding-right: 15%;
 }
