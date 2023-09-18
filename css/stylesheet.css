@@ -71,7 +71,9 @@ h4 {
 
 .navbar {
     background-color: #000;
-    font-family: DIN-black
+    font-family: DIN-black;
+    padding-left: 15%;
+    padding-right: 15%;
 }
 
 .navbar-brand {
@@ -86,7 +88,6 @@ h4 {
 .main-content {
     /* idk experimentally, looks the best to me */
     margin-top: 7%;
-    padding: 0.5rem 1rem;
 }
 
 .sidebar {
@@ -176,23 +177,23 @@ h4 {
 }
 
 .top-blurb {
+    padding-top: 80px;
     background-color: #999999;
-    margin-top: 60px;
-    padding-top: 10px;
     padding-bottom: 20px;
-    padding-left: 130px;
-    padding-right: 130px;
+    padding-left: 15%;
+    padding-right: 15%;
     width: 100%;
 }
 
 .tag-box {
     background-color: #ffffff;
     margin-top: -10px;
-    margin-left: 15px;
+    margin-left: 20px;
     padding-left: 10px;
     padding-right: 10px;
-    outline: 3px solid #00448B
+    outline: 3px solid #00448B;
 }
+
 
 .tag {
     color: #000;
@@ -200,13 +201,6 @@ h4 {
     margin: 0 0 0 0;
 }
 
-.blurb-img {
-    outline: 3px solid #00448B;
-    margin-left: 15px;
-    margin-top: 20px;
-    height: auto;
-    width: 400px;
-}
 
 .blurb-text {
     background-color: #ffffff;
@@ -217,28 +211,14 @@ h4 {
     outline: 3px solid #00448B;
 }
 
-.jump-button {
-    background-color: #00448B;
-    margin-left: 20px;
-    text-align: center;
-    color: #ffffff;
-}
-
 .workshop-content {
-    margin-top: 20px;
-    margin-left: 130px;
-    max-width: 45%;
-}
-
-.photo-strip {
-    margin-left: auto;
-    margin-right: 130px;
-    width: 400px;
+    padding-left: 15%;
+    padding-right: 15%;
 }
 
 .strip-photo {
     margin-top: 30px;
-    width: 400px;
+    width: 100%;
 
 }
 .adjust-line-height {
