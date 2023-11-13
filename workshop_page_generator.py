@@ -1,65 +1,142 @@
+from pprint import pprint
+from ast import literal_eval as eval
+
+
+def convert_str_list_to_list(raw_tags: str) -> list:
+    """Convert a string meant to represent a list into a list
+
+    :param raw_tags: _description_
+    :type raw_tags: str
+    :return: _description_
+    :rtype: list
+    """
+
+    tag_list = eval(raw_tags)
+    assert isinstance(tag_list, list)
+    return tag_list
+
+
+def grab_metadata(metadata: list[str], workshop_dictionary: dict) -> dict:
+    """Grab all of the metadata to put into a dictionary
+
+    :param markdown: _description_
+    :type markdown: list[str]
+    """
+
+    for line in metadata:
+        split_line = line.split(":")
+        if len(split_line) != 2:
+            continue
+        if (
+            split_line[0] == "tags"
+            or split_line[0] == "images"
+            # or split_line[0] == "files" # not sure if files ever comes in as a list
+        ):
+            tags = convert_str_list_to_list(split_line[1])
+            workshop_dictionary[split_line[0]] = tags
+            continue
+        workshop_dictionary[split_line[0]] = split_line[1]
+
+    return workshop_dictionary
+
+
+def grab_content(content: list[str], workshop_dictionary: dict) -> dict:
+    for element in content:
+        # IF IT'S A HEADING
+        if element.startswith("#"):
+            current_heading = element.strip("# ").strip()
+            # Prepare a string to dump the rest of the content
+            workshop_dictionary[current_heading] = ""
+        # Assuming there is a heading to go off of
+        elif current_heading:
+            # HTML formatting line break
+            if element == "":
+                element = " <br> "
+            workshop_dictionary[current_heading] += element
+    return workshop_dictionary
+
+
+def construct_workshop_dictionary(
+    markdown_list: list[str], metadata: list[str], content: list[str]
+) -> dict:
+    workshop_dictionary = {}
+    workshop_dictionary = grab_metadata(metadata, workshop_dictionary)
+    workshop_dictionary = grab_content(content, workshop_dictionary)
+    return workshop_dictionary
+
+
 def load_markdown():
-    pass
+    """From a markdown file, load all information into a
+    dictionary for the generator
+    """
+    with open("floatboats.md", "r", encoding="utf-8") as file:
+        markdown_text = file.read()
+    markdown_list = markdown_text.split("\n")
+
+    metadata = []
+    content_index = 0
+    for line in markdown_list:
+        # CONTENT HAS STARTED
+        if line.startswith("#"):
+            break
+        # Else append to metadata
+        metadata.append(line)
+        content_index += 1
+
+    workshop_dictionary = construct_workshop_dictionary(
+        markdown_list, metadata, markdown_list[content_index:]
+    )
+    # pprint(workshop_dictionary)
+    return workshop_dictionary
 
 
 def gen_tags(tags) -> str:
-    first = '''
+    first = """
     <div class = "tag-box">
-        <p class = "tag">'''
-    second = '''</p>
+        <p class = "tag">"""
+    second = """</p>
     </div>
-    '''
-    
+    """
+
     tags_str = ""
     for tag in tags:
-        tags_str += (first + tag + second)
-        
+        tags_str += first + tag + second
+
     return tags_str
+
 
 def gen_img_strip(img_path_list) -> str:
     first = '<img class = "strip-photo" src="'
-    second = '" alt="">\n' # NOTE: can add alt text options here 
-    
+    second = '" alt="">\n'  # NOTE: can add alt text options here
+
     img_str = ""
     for img in img_path_list:
-        img_str += (first + img + second)
-        
+        img_str += first + img + second
+
     return img_str
 
-def gen_workshop_page():
+
+def gen_workshop_page(workshop_dict: dict):
     download_html = "../downloads/float_boatGuide.pdf"
-    workshop_title = "To Float a Boat"
-    
-    description = '''
-        Would your students have fun learning about buoyancy by
-        getting their hands wet with some fun challenges? 
-        This workshop will help students learn how boats work
-        through a series of activities that cover buoyancy 
-        and sail design through iterative building and hands-on group work. 
-        Over the course of this workshop, students will build their own 
-        cardboard boat from scratch and see how much “treasure” it can hold!
-        <br>
-        <br>
-        Several of the described activities can take place concurrently, allowing students to choose with which stations
-        they engage. A culminating large cardboard boat building activity can be contracted or 
-        expanded as time allows.'''
-    
-    materials_and_preparation=f'''The <a href="{download_html}">Teacher's Guide </a> provides set-up instructions 
-                    for multiple boat-related hands-on activites.
-                    Most of the activities use common materials such as duct tape, tin foil, plastic bins, and discarded cardboard. 
-                    One of the activities uses 3D-printed 
-                    shapes as a way to explore buoyancy, but lower-fi alternatives can be used to a similar effect.'''
-    
-    tag_list = ["E4E", "Science", "Engineering", "1 hour", "Elementary"]
+    workshop_title = workshop_dict["title"]
+
+    description = workshop_dict["Description"]
+    materials_and_preparation = workshop_dict["Materials"]
+
+    tag_list = workshop_dict["tags"]
     tags_html = gen_tags(tag_list)
-    
-    
-    img_path_list = ["../img/float_boat/floatboat1.jpg", "../img/float_boat/floatboat2.jpg", "../img/float_boat/floatboat3.jpg", "../img/float_boat/floatboat4.jpg"]
+
+    img_path_list = workshop_dict["images"]
+    # img_path_list = [
+    #     "../img/float_boat/floatboat1.jpg",
+    #     "../img/float_boat/floatboat2.jpg",
+    #     "../img/float_boat/floatboat3.jpg",
+    #     "../img/float_boat/floatboat4.jpg",
+    # ]
+    #
     images_html = gen_img_strip(img_path_list)
-    
-    download_html = "../downloads/float_boatGuide.pdf"
-    
-    workshop_page = f'''<!DOCTYPE html>
+
+    workshop_page = f"""<!DOCTYPE html>
         <html lang="en">
 
         <head>
@@ -143,18 +220,20 @@ def gen_workshop_page():
         <script src="js/script.js"></script>
 
         </html>
-        '''
-    
+        """
+
     return workshop_page
 
+
 if __name__ == "__main__":
+    workshop_dict = load_markdown()
+    pprint(workshop_dict)
     # tags = gen_tags(["E4E", "6-12", "smile"])
-    
+
     # # print(tags)
     # img_path_list = ["../img/float_boat/floatboat1.jpg", "../img/float_boat/floatboat2.jpg", "../img/float_boat/floatboat3.jpg", "../img/float_boat/floatboat4.jpg"]
     # images_html = gen_img_strip(img_path_list)
     # print(images_html)
-    out = gen_workshop_page()
+    out = gen_workshop_page(workshop_dict)
     with open("new_workshop.txt", "w") as file:
-            file.write(out)
-  
+        file.write(out)

@@ -35,12 +35,12 @@
         <!-- CHANGE TITLE and TAGS HERE-->
 
             <div class = "top-blurb container-fluid">
-                <h2> To Float a Boat
+                <h2>  "To Float a Boat"
                 </h2>
                 <div class = "row">
                     
     <div class = "tag-box">
-        <p class = "tag">E4E</p>
+        <p class = "tag">Elementary</p>
     </div>
     
     <div class = "tag-box">
@@ -56,7 +56,7 @@
     </div>
     
     <div class = "tag-box">
-        <p class = "tag">Elementary</p>
+        <p class = "tag">E4E</p>
     </div>
     
                 </div>
@@ -68,27 +68,12 @@
                     <div class = "col-lg-8">
                     <h2>Description</h2>
                     <p> 
-                        
-        Would your students have fun learning about buoyancy by
-        getting their hands wet with some fun challenges? 
-        This workshop will help students learn how boats work
-        through a series of activities that cover buoyancy 
-        and sail design through iterative building and hands-on group work. 
-        Over the course of this workshop, students will build their own 
-        cardboard boat from scratch and see how much “treasure” it can hold!
-        <br>
-        Several of the described activities can take place concurrently, allowing students to choose with which stations
-        they engage. A culminating large cardboard boat building activity can be contracted or 
-        expanded as time allows.                   
+                        Would your students have fun learning about buoyancy by getting their hands wet with some fun challenges? This workshop will help students learn how boats work through a series of activities that cover buoyancy and sail design through iterative building and hands-on group work. Over the course of this workshop, students will build their own cardboard boat from scratch and see how much “treasure” it can hold! <br> Several of the described activities can take place concurrently, allowing students to choose with which stations they engage. A culminating large cardboard boat building activity can be contracted or expanded as time allows. <br>                    
                     </p>
 
                     <h2>Materials + Preparation</h2>
                     <p> 
-                        The <a href="../downloads/float_boatGuide.pdf">Teacher's Guide </a> provides set-up instructions 
-                    for multiple boat-related hands-on activites.
-                    Most of the activities use common materials such as duct tape, tin foil, plastic bins, and discarded cardboard. 
-                    One of the activities uses 3D-printed 
-                    shapes as a way to explore buoyancy, but lower-fi alternatives can be used to a similar effect.
+                        The Teacher's Guide provides set-up instructions for multiple boat-related hands-on activites. Most of the activities use common materials such as duct tape, tin foil, plastic bins, and discarded cardboard. One of the activities uses 3D-printed shapes as a way to explore buoyancy, but lower-fi alternatives can be used to a similar effect. <br> 
                 </p>
                             
             
