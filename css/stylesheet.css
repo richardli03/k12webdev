@@ -35,6 +35,13 @@ body {
     /* Hide any overflowing content */
 }
 
+h1 {
+    font-family: DIN-black;
+    color: #00448B;
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+
 h2 {
     font-family: DIN-black;
     color: #00448B;
@@ -64,7 +71,9 @@ h4 {
 
 .navbar {
     background-color: #000;
-    font-family: DIN-black
+    font-family: DIN-black;
+    padding-left: 15%;
+    padding-right: 13%;
 }
 
 .navbar-brand {
@@ -72,7 +81,7 @@ h4 {
 }
 
 .navbar-brand img {
-    height: 30px;
+    height: 60px;
     width: auto;
 }
 
@@ -82,8 +91,7 @@ h4 {
 }
 
 .sidebar {
-    margin-top: 50px;
-    margin-left: 50px;
+    margin-top: 100px
 }
 
 .sidebar-header {
@@ -146,11 +154,6 @@ h4 {
     transform: scale(0.95);
 }
 
-.sidebar {
-    background-color: #E4E4E4;
-    padding: 20px;
-}
-
 
 .about-block {
     padding-left: 115px;
@@ -174,23 +177,29 @@ h4 {
 }
 
 .top-blurb {
+    padding-top: 80px;
     background-color: #999999;
-    margin-top: 60px;
-    padding-top: 10px;
     padding-bottom: 20px;
-    padding-left: 130px;
-    padding-right: 130px;
+    padding-left: 15%;
+    padding-right: 15%;
     width: 100%;
+}
+
+.photo-strip {
+    margin-left: auto;
+    margin-right: 130px;
+    width: 400px;
 }
 
 .tag-box {
     background-color: #ffffff;
     margin-top: -10px;
-    margin-left: 15px;
+    margin-left: 20px;
     padding-left: 10px;
     padding-right: 10px;
-    outline: 3px solid #00448B
+    outline: 3px solid #00448B;
 }
+
 
 .tag {
     color: #000;
@@ -198,13 +207,6 @@ h4 {
     margin: 0 0 0 0;
 }
 
-.blurb-img {
-    outline: 3px solid #00448B;
-    margin-left: 15px;
-    margin-top: 20px;
-    height: auto;
-    width: 400px;
-}
 
 .blurb-text {
     background-color: #ffffff;
@@ -215,17 +217,10 @@ h4 {
     outline: 3px solid #00448B;
 }
 
-.jump-button {
-    background-color: #00448B;
-    margin-left: 20px;
-    text-align: center;
-    color: #ffffff;
-}
-
 .workshop-content {
     margin-top: 20px;
     margin-left: 130px;
-    max-width: 60%;
+    max-width: 45%;
 }
 
 .photo-strip {
@@ -234,8 +229,30 @@ h4 {
     width: 400px;
 }
 
-.strip-photo {
-    margin-top: 30px;
-    width: 400px;
+.meredith-workshop-content {
+    padding-left: 15%;
+    padding-right: 15%;
+}
 
+.strip-photo {
+    margin-top: 15px;
+    width: 100%;
+
+}
+
+.adjust-line-height {
+    line-height: 1em;
+  }
+
+.download-box {
+    background-color: #00448B;
+    margin-top: 15px;
+    padding-top: 20px;
+    padding-bottom: 5px;
+    text-align: center;
+    font-family: DIN-black;
+    color: #ffffff;
+    font-size: 25px;
+    outline: 10px solid #999999;
+    outline-offset: -10px
 }
