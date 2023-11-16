@@ -1,6 +1,6 @@
 ---
 slug: "/workshop-2"
-title: "Dragon Design Challenges: Design, Build, Test, Iterate "
+title: "Dragon Design Challenges - Design, Build, Test, Iterate"
 images: ['../img/dragon/dragon1.jpg', '../img/dragon/dragon2.jpg', '../img/dragon/dragon3.jpg', '../img/dragon/dragon4.jpg']
 tags: ['Middle', 'High', 'Math', 'Art', '1 hour', 'E4E']
 shortdescription: "Students learn about buoyancy, surface area, and density by exploring how boats work, and they work together to design working sails and cardboard boats."
