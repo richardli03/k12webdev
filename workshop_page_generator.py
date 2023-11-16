@@ -65,11 +65,11 @@ def construct_workshop_dictionary(
     return workshop_dictionary
 
 
-def load_markdown():
+def load_markdown(markdown_file_path):
     """From a markdown file, load all information into a
     dictionary for the generator
     """
-    with open("floatboats.md", "r", encoding="utf-8") as file:
+    with open(markdown_file_path, "r", encoding="utf-8") as file:
         markdown_text = file.read()
     markdown_list = markdown_text.split("\n")
 
@@ -150,12 +150,19 @@ def gen_workshop_page(workshop_dict: dict):
 
         <body>
 
-            <nav class="fixed-top navbar navbar-expand-lg">
-                <div class='row container-fluid'>
-                        <a class="navbar-brand" href="../index.html">
-                            <img src="../img/olin_workshops_left.png" alt="Logo">
-                        </a>
-                        <ul class="nav navbar-nav navbar-right">
+            <nav class="fixed-top navbar navbar-expand-lg navbar-dark">
+                <div class="container">
+                    <a class="navbar-brand" href="index.html">
+                        <img src="../img/olin_black.png" alt="Logo">
+                    </a>
+                    <span class="navbar-brand">K12 Workshops</span>
+                    <button class="navbar-toggler hidden-sm-up float-xs-right" type="button" data-toggle="collapse"
+                        data-target="#navcollapser" aria-controls="navcollapser" aria-expanded="false"
+                        aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse justify-content-end" id="navcollapser">
+                        <ul class="nav navbar-nav">
                             <li class="nav-item">
                                 <a class="nav-link active" href="../index.html">Gallery</a>
                             </li>
@@ -163,13 +170,17 @@ def gen_workshop_page(workshop_dict: dict):
                                 <a class="nav-link" href="../about.html">About</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" target = "_blank" href="https://www.olin.edu">Olin ></a>
+                                <a class="nav-link" href="https://www.olin.edu">Olin</a>
                             </li>
+                            <!-- UNCOMMENT WHEN ARCHIVE IS WORKING -->
+                            <!-- <li class="nav-item">
+                                <a class="nav-link" href="archive.html">Archive</a>
+                            </li> -->
                         </ul>
-                        </div>
                     </div>
                 </div>
             </nav>
+
         <!-- CHANGE TITLE and TAGS HERE-->
 
             <div class = "top-blurb container-fluid">
@@ -215,9 +226,9 @@ def gen_workshop_page(workshop_dict: dict):
                 
         </body>
 
-        <script src="js/ext/jquery-3.5.1.min.js"></script>
-        <script src="js/ext/bootstrap.bundle.min.js"></script>
-        <script src="js/script.js"></script>
+        <script src="../js/ext/jquery-3.5.1.min.js"></script>
+        <script src="../js/ext/bootstrap.bundle.min.js"></script>
+        <script src="../js/script.js"></script>
 
         </html>
         """
@@ -226,7 +237,7 @@ def gen_workshop_page(workshop_dict: dict):
 
 
 if __name__ == "__main__":
-    workshop_dict = load_markdown()
+    workshop_dict = load_markdown("markdowns/floatboats.md")
     pprint(workshop_dict)
     # tags = gen_tags(["E4E", "6-12", "smile"])
 
