@@ -177,10 +177,11 @@ h4 {
 }
 
 .top-blurb {
-    padding-top: 80px;
+    margin-top: 60px;
+    padding-top: 60px;
     background-color: #999999;
     padding-bottom: 20px;
-    padding-left: 15%;
+    padding-left: 15%; 
     padding-right: 15%;
     width: 100%;
 }
@@ -193,11 +194,12 @@ h4 {
 
 .tag-box {
     background-color: #ffffff;
-    margin-top: -10px;
+    margin-top: 10px;
     margin-left: 20px;
     padding-left: 10px;
     padding-right: 10px;
     outline: 3px solid #00448B;
+    display: inline-block;
 }
 
 
