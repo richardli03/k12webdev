@@ -15,10 +15,17 @@ This module serves as an introduction to robotics with a cutebot after they have
 
 # Materials
 Cutebot Pack:
+
 Cutebot chase
+
 Sonar sensor (eyes)
+
 Battery pack + 3 AAA batteries
+
 Microbit
+
 Usb to micro usb cord
+
 Computer
+
 Wifi

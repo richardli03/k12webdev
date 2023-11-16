@@ -12,8 +12,13 @@ In this module kids will use popsicle sticks to create a little hopper that jump
 
 # Materials
 2 Popsicle Sticks
+
 1 Rubber Band
+
 Masking Tape
+
 Scissors
+
 Hot Glue
+
 Paint (optional) 

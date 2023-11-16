@@ -12,14 +12,25 @@ In this activity kids will make their own vibrating scorpion, a little toy bug t
 
 # Materials
 White Paper
+
 Hot Glue Gun
+
 Scissors
+
 Wire Cutters
+
 Vibration Motor
+
 Paper Clips
+
 Small Clip
+
 Large Clip
+
 Battery
+
 Marker
+
 Popsicle Stick
+
 (optional: paint or other decorating materials)
