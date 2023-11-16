@@ -35,7 +35,7 @@ def grab_metadata(metadata: list[str], workshop_dictionary: dict) -> dict:
             tags = convert_str_list_to_list(split_line[1])
             workshop_dictionary[split_line[0]] = tags
             continue
-        workshop_dictionary[split_line[0]] = split_line[1]
+        workshop_dictionary[split_line[0]] = split_line[1].strip()
 
     return workshop_dictionary
 
@@ -118,7 +118,7 @@ def gen_img_strip(img_path_list) -> str:
 
 def gen_workshop_page(workshop_dict: dict):
     download_html = "../downloads/float_boatGuide.pdf"
-    workshop_title = workshop_dict["title"]
+    workshop_title = workshop_dict["title"].strip('"')
 
     description = workshop_dict["Description"]
     materials_and_preparation = workshop_dict["Materials"]
@@ -152,7 +152,7 @@ def gen_workshop_page(workshop_dict: dict):
 
             <nav class="fixed-top navbar navbar-expand-lg navbar-dark">
                 <div class="container">
-                    <a class="navbar-brand" href="index.html">
+                    <a class="navbar-brand" href="../index.html">
                         <img src="../img/olin_black.png" alt="Logo">
                     </a>
                     <span class="navbar-brand">K12 Workshops</span>
@@ -237,7 +237,7 @@ def gen_workshop_page(workshop_dict: dict):
 
 
 if __name__ == "__main__":
-    workshop_dict = load_markdown("markdowns/floatboats.md")
+    workshop_dict = load_markdown("markdowns/spinners.md")
     pprint(workshop_dict)
     # tags = gen_tags(["E4E", "6-12", "smile"])
 
