@@ -72,7 +72,7 @@ def generate_workshop(title, tags, description, path_to_subpage, path_to_thumbna
                 </a>
                 <div class="workshop-caption">
                     <p class="tags">{read_tags}</p>
-                    <a href="{path_to_subpage}"> <h4>{title}<a> </h4> <a href="{path_to_download}" download>
+                    <a href="{path_to_subpage}"> <h4>{title}</h4> <a> <a href="{path_to_download}" download>
                             <img id="download" src="assets/download.png"> </a> 
                     <p class="workshop-description">{description}</p>
                 </div>
